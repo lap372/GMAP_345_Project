@@ -5148,7 +5148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bb1aa77e9ffbf41aff664788d6ac71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDuration: 10
+  phaseDuration: 60
   timeSlider: {fileID: 957752174}
   spawners:
   - {fileID: 835671874}
@@ -7304,7 +7304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -741, y: -625.6}
+  m_AnchoredPosition: {x: -501, y: -455}
   m_SizeDelta: {x: 572.5616, y: 73.5113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957752174
@@ -8303,6 +8303,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4724685710171962820, guid: b20993b3bc0790747a94b68bcfc4b022,
+        type: 3}
+      propertyPath: selfID
+      value: square
+      objectReference: {fileID: 0}
     - target: {fileID: 4801686968760711948, guid: b20993b3bc0790747a94b68bcfc4b022,
         type: 3}
       propertyPath: m_Name
@@ -8448,6 +8453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeListSO: {fileID: 11400000, guid: 3fa6a15561610cc43ad64e532aec8954, type: 2}
+  deliveryCounter: {fileID: 4724685710171962820, guid: b20993b3bc0790747a94b68bcfc4b022,
+    type: 3}
 --- !u!4 &1107394847
 Transform:
   m_ObjectHideFlags: 0
@@ -9033,6 +9040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724685710171962820, guid: b20993b3bc0790747a94b68bcfc4b022,
+        type: 3}
+      propertyPath: selfID
+      value: star
       objectReference: {fileID: 0}
     - target: {fileID: 4801686968760711948, guid: b20993b3bc0790747a94b68bcfc4b022,
         type: 3}
@@ -9977,6 +9989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724685710171962820, guid: b20993b3bc0790747a94b68bcfc4b022,
+        type: 3}
+      propertyPath: selfID
+      value: triangle
       objectReference: {fileID: 0}
     - target: {fileID: 4801686968760711948, guid: b20993b3bc0790747a94b68bcfc4b022,
         type: 3}
@@ -13174,7 +13191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -721, y: -564.6}
+  m_AnchoredPosition: {x: -481, y: -394}
   m_SizeDelta: {x: 646.7344, y: 78.3987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941354643
@@ -14624,6 +14641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724685710171962820, guid: b20993b3bc0790747a94b68bcfc4b022,
+        type: 3}
+      propertyPath: selfID
+      value: circle
       objectReference: {fileID: 0}
     - target: {fileID: 4801686968760711948, guid: b20993b3bc0790747a94b68bcfc4b022,
         type: 3}
