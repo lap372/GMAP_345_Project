@@ -10,6 +10,8 @@ public class DeliveryCounter : BaseCounter
     {
         if(player.HasKitchenObject())
         {
+            DeliveryManager.Instance.deliveryCounterID = GetSelfID();
+
             if(player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject)) 
                 //only accepts plates
             {

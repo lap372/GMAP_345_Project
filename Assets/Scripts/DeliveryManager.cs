@@ -8,7 +8,8 @@ public class DeliveryManager : MonoBehaviour
     public static DeliveryManager Instance { get; private set; }
 
     [SerializeField] private RecipeListSO recipeListSO;
-    [SerializeField] private DeliveryCounter deliveryCounter;
+    // [SerializeField] private DeliveryCounter deliveryCounter;
+    public string deliveryCounterID;
 
     private List<RecipeSO> waitingRecipeSOList;
 
@@ -47,6 +48,11 @@ public class DeliveryManager : MonoBehaviour
         return tableID[Random.Range(0,8)];
     }
 
+    // private string ReturnTableID(DeliveryCounter counter){
+    //     var identification = counter.GetComponent<DeliveryCounter>();
+    //     return identification.selfID;
+    // }
+
     public void DeliverRecipe(PlateKitchenObject plateKitchenObject)
     {
         for(int i = 0; i < waitingRecipeSOList.Count; ++i) 
@@ -83,7 +89,7 @@ public class DeliveryManager : MonoBehaviour
                 if (plateContentsMatchesRecipe)
                 {
                     //player delivers to right table
-                    if(waitingRecipeSO.tableID == deliveryCounter.selfID){
+                    if(waitingRecipeSO.tableID == deliveryCounterID){
                         //player delivered correct recipe
                         Debug.Log("player delivered correct recipe");
                         waitingRecipeSOList.RemoveAt(i);
@@ -93,8 +99,8 @@ public class DeliveryManager : MonoBehaviour
             }
         }
         //no matches found
-        //player did not deliver a correct reccipe
-        Debug.Log("player did not deliver correct recipe");
+        //player did not deliver a correct recipe
+        Debug.Log("player did not deliver correct recipe " + deliveryCounterID);
 
     }
 

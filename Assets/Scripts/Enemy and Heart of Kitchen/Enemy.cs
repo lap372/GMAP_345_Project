@@ -6,9 +6,12 @@ public class Enemy : MonoBehaviour
     public int health = 10;               // Initial health for the enemy
     public float moveSpeed = 3.5f;        // Enemy move speed
     public int enemyDamage = 5;           // Damage dealt to the goal upon reaching it
+    public bool diedToGoal = false;
 
     private NavMeshAgent agent;
     private Transform goal;
+
+    public GameObject goldPrefab;
 
     void Start()
     {
@@ -27,6 +30,9 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            //if(diedToGoal){
+            //Instantiate(goldPrefab, transform.position, transform.rotation);
+            //}
         }
     }
 
@@ -52,6 +58,7 @@ public class Enemy : MonoBehaviour
             {
                 // Damage the goal using the enemyDamage variable, then set health to 0
                 goalScript.TakeDamage(enemyDamage);
+                //diedToGoal = true;
                 health = 0;
             }
         }
