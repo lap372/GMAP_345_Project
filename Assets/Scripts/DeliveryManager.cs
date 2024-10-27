@@ -8,7 +8,6 @@ public class DeliveryManager : MonoBehaviour
     public static DeliveryManager Instance { get; private set; }
 
     [SerializeField] private RecipeListSO recipeListSO;
-    // [SerializeField] private DeliveryCounter deliveryCounter;
     public string deliveryCounterID;
 
     private List<RecipeSO> waitingRecipeSOList;
@@ -93,6 +92,9 @@ public class DeliveryManager : MonoBehaviour
                         //player delivered correct recipe
                         Debug.Log("player delivered correct recipe");
                         waitingRecipeSOList.RemoveAt(i);
+                        //give cash upon giving correct recipe
+                        CashManager.Instance.AddToCash(5);
+                        Debug.Log(CashManager.Instance.GetCashValue());
                         return;
                     }  
                 }

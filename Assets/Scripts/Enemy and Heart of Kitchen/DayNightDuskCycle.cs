@@ -11,8 +11,8 @@ public class DayNightDuskCycle : MonoBehaviour
     public List<Sprite> timeSprites;    // List of Sprites for Day, Dusk, and Night
 
     private float timer = 0f;          // Timer to keep track of the cycle
-    private enum TimeOfDay { Day, Night, Dusk }
-    private TimeOfDay currentTimeOfDay; // Current state of the day/night cycle
+    public enum TimeOfDay { Day, Night, Dusk, Dawn }
+    public TimeOfDay currentTimeOfDay; // Current state of the day/night cycle
 
     void Start()
     {
@@ -43,6 +43,10 @@ public class DayNightDuskCycle : MonoBehaviour
                 case TimeOfDay.Dusk:
                     currentTimeOfDay = TimeOfDay.Day;
                     Debug.Log("Switching to Day");
+                    break;
+                case TimeOfDay.Dawn:
+                    currentTimeOfDay = TimeOfDay.Dawn;
+                    Debug.Log("Switching to Dawn");
                     break;
             }
 
