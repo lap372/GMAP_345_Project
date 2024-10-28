@@ -12,7 +12,7 @@ public class DeliveryManager : MonoBehaviour
 
     private List<RecipeSO> waitingRecipeSOList;
 
-    private List<string> tableID = new List<string>{"triangle", "square", "circle", "pentagon", "star", "moon", "diamond", "cross"};
+    private List<string> tableID = new List<string>{"triangle", "square", "circle", "star"};    // add diamond, pentagon, moon, and cross after testing
 
     private float spawnRecipeTimer;
     private float spawnRecipeTimerMax =  4f;
@@ -44,7 +44,7 @@ public class DeliveryManager : MonoBehaviour
     }
 
     private string RandomTableID(){
-        return tableID[Random.Range(0,8)];
+        return tableID[Random.Range(0,4)]; // change 2nd condition to 8 after testing
     }
 
     // private string ReturnTableID(DeliveryCounter counter){
@@ -85,10 +85,11 @@ public class DeliveryManager : MonoBehaviour
                     }
                 }
 
-                if (plateContentsMatchesRecipe)
+                if (waitingRecipeSO.tableID == deliveryCounterID) //plateContentsMatchesRecipe
                 {
+                    Debug.Log(waitingRecipeSO.tableID);
                     //player delivers to right table
-                    if(waitingRecipeSO.tableID == deliveryCounterID){
+                    if(plateContentsMatchesRecipe){
                         //player delivered correct recipe
                         Debug.Log("player delivered correct recipe");
                         waitingRecipeSOList.RemoveAt(i);

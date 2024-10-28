@@ -5204,6 +5204,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 256b17f65ca4560449866be321c6b6b2, type: 3}
   - {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   - {fileID: 21300000, guid: 119f93d0bcbf1e743bf5fcf237507d39, type: 3}
+  currentTimeOfDay: 0
 --- !u!4 &625409605
 Transform:
   m_ObjectHideFlags: 0
@@ -13332,6 +13333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02d4a4bb20564b4fb1576640d7125f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayNightDuskCycle: {fileID: 0}
+  patronTableID: 
 --- !u!4 &1933164446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1011606461333421334, guid: bed660ccfb8c27546bb01381a7a62ccf,
