@@ -17,6 +17,7 @@ public class Patron : MonoBehaviour
     void Start()
     {
         currentStatus = patronType.Customer; // Start with Customer
+        BackToTable();
     }
 
     // Update is called once per frame
@@ -42,7 +43,9 @@ public class Patron : MonoBehaviour
 
     // a patron needs to move to tables associated to them
     public void BackToTable(){
-
+        // find table that matches IDs
+        // get that table's position
+        // move to that table (NavMesh?)
     }
     // a recruited patron needs to go back into customer when dawn hits (we need dawn as well)
     public void RecruitToCustomer(){
@@ -56,5 +59,11 @@ public class Patron : MonoBehaviour
         //lettuce & tomato = 5, cheese = 10, meat & bun = 5
 
         
+    }
+
+    // patrons will attack enemies with projectiles (?)
+    public void AttackEnemies(){
+        // aim at enemies
+        // shoot projectile
     }
 }
