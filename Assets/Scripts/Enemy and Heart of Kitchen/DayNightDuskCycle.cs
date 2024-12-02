@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class DayNightDuskCycle : MonoBehaviour
 {
     public float phaseDuration = 30f; // Duration for day, dusk, and night
-    public Slider timeSlider;          // Reference to the UI Slider
+    public Image clockFace;             //Reference to the UI image for the face of the clock
     public GameObject[] spawners;      // Array of spawner GameObjects
     public Image background;            // Reference to the UI Image for background
     public List<Sprite> timeSprites;    // List of Sprites for Day, Dusk, and Night
@@ -79,8 +79,18 @@ public class DayNightDuskCycle : MonoBehaviour
     private void UpdateSlider()
     {
         // Update the slider based on the current timer and phase duration
-        float value = 1 - (timer / phaseDuration);
-        timeSlider.value = Mathf.Clamp01(value);
+
+        //rotates clock image as time counts down 
+        float newValue = 1 - (timer/phaseDuration);
+        //clockFace.transform.Rotate(0.0f, 0.0f, Mathf.Clamp01(newValue));
+        if (timer <= phaseDuration)
+        {
+
+            clockFace.transform.Rotate(0.0f, 0.0f, Mathf.Clamp01(newValue));
+
+        }
+        
+
     }
 
     private void UpdateBackgroundImage()
