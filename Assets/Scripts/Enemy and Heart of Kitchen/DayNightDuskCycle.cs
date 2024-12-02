@@ -9,7 +9,7 @@ public class DayNightDuskCycle : MonoBehaviour
     public GameObject[] spawners;      // Array of spawner GameObjects
     public Image background;            // Reference to the UI Image for background
     public List<Sprite> timeSprites;    // List of Sprites for Day, Dusk, and Night
-
+      
     private float timer = 0f;          // Timer to keep track of the cycle
     public enum TimeOfDay { Day, Night, Dusk, Dawn }
     public TimeOfDay currentTimeOfDay; // Current state of the day/night cycle
