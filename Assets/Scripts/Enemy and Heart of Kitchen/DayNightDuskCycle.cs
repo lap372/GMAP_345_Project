@@ -73,7 +73,7 @@ public class DayNightDuskCycle : MonoBehaviour
 
         // Debugging log to see the current state
         Debug.Log($"Current Time of Day: {currentTimeOfDay}. Spawners active: {isNight}");
-    }
+    } 
 
 
     private void UpdateSlider()
