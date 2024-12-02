@@ -91,7 +91,7 @@ public class DayNightDuskCycle : MonoBehaviour
         }
         
          
-    }
+    } 
 
     private void UpdateBackgroundImage()
     {
